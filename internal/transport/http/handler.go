@@ -3,13 +3,12 @@ package http
 import (
 	"fmt"
 	"net/http"
-
 	"github.com/gorilla/mux"
 )
 
 //Handler - stores pointer to our address service
 type Handler struct {
-	Router *mux.ROuter
+	Router *mux.Router
 }
 
 //NewHandler - returns a pointer to a Handler
