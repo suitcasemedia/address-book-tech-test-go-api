@@ -15,7 +15,7 @@ type Handler struct {
 func NewHandler() *Handler {
 	return &Handler{}
 }
-
+// SetupROutes - sets up all the routes for our application
 func (h *Handler) SetupRoutes() {
 	fmt.Println("Setting Up Routes")
 	h.Router = mux.NewRouter()

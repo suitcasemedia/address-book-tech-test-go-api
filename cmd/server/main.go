@@ -2,11 +2,9 @@ package main
 
 import (
 	"fmt"
-	
+	"net/http"
 
-	transportHTTP "github.com/suitcasemedia/address-book-tech-test-go-api/internal/transport/http"
-
-
+	transportHTTP "github.com/TutorialEdge/go-rest-api-course/internal/transport/http"
 )
 
 // App - the struct which contains things like pointers
@@ -24,16 +22,15 @@ func (app *App) Run() error {
 		fmt.Println("Failed to set up server")
 		return err
 	}
-	return nil
 
+	return nil
 }
+
 func main() {
-	fmt.Println("GO address book")
+	fmt.Println("Go REST API Course")
 	app := App{}
 	if err := app.Run(); err != nil {
 		fmt.Println("Error starting up our REST API")
 		fmt.Println(err)
-
 	}
-
 }
